@@ -95,68 +95,111 @@
 // console.log(g(1, 2))
 // console.log(g('Ответ', 3))
 
-let a: any = 1
-let b: number = a
+// let a: any = 1
+// let b: number = a
 
-let c: unknown = 1
-// let d: number = c
-let d: number = <number>c
-let e: number = c as number
+// let c: unknown = 1
+// // let d: number = c
+// let d: number = <number>c
+// let e: number = c as number
 
-let f: any = 'Hello'
-let g: number = (<string>f).length
+// let f: any = 'Hello'
+// let g: number = (<string>f).length
 
-let h: number | string = 1
-h = 'Hi'
-// h = true
+// let h: number | string = 1
+// h = 'Hi'
+// // h = true
 
-type I = number | string
-let i: I = 1
-i = 'Hello'
-// i = true
+// type I = number | string
+// let i: I = 1
+// i = 'Hello'
+// // i = true
 
-type J = 1 | 2 | 3
-let j: J = 1
-j = 2
-j = 3
-// j = 4
+// type J = 1 | 2 | 3
+// let j: J = 1
+// j = 2
+// j = 3
+// // j = 4
 
-type K = 'a' | 'b' | 'c'
-let k: K = 'a'
-k = 'b'
-k = 'c'
-// k = 'd'
+// type K = 'a' | 'b' | 'c'
+// let k: K = 'a'
+// k = 'b'
+// k = 'c'
+// // k = 'd'
 
-type L = true
-let l: L = true
-// l = false
+// type L = true
+// let l: L = true
+// // l = false
 
-type JKL = 'a' | 1 | boolean
-let jkl: JKL = 'a'
-// jkl = 2
-jkl = true
-jkl = false
+// type JKL = 'a' | 1 | boolean
+// let jkl: JKL = 'a'
+// // jkl = 2
+// jkl = true
+// jkl = false
 
-type M = { a: string } | { b: string }
-let m: M = { a: ''}
-m = { b: ''}
-m = { a: '', b: ''}
-// m = { a: '', b: '', c: '' }
-// m = {}
+// type M = { a: string } | { b: string }
+// let m: M = { a: ''}
+// m = { b: ''}
+// m = { a: '', b: ''}
+// // m = { a: '', b: '', c: '' }
+// // m = {}
 
-type N = { a: string } & { b: string }
-let n: N = { a: '', b: '' }
-// n = { a: '' }
-// n = { b: '' }
-// n = {}
+// type N = { a: string } & { b: string }
+// let n: N = { a: '', b: '' }
+// // n = { a: '' }
+// // n = { b: '' }
+// // n = {}
 
-type O = { a: string, b?: string }
-let o: O = { a: '' }
-// o = { a: '', b: '' }
-// o = { a: '', b: '', c: '' }
-// o = {}
+// type O = { a: string, b?: string }
+// let o: O = { a: '' }
+// // o = { a: '', b: '' }
+// // o = { a: '', b: '', c: '' }
+// // o = {}
 
-if ('b' in o) {
-  console.log('TypeScript')
+// if ('b' in o) {
+//   console.log('TypeScript')
+// }
+
+// Array
+// let a = []
+// a = [1, '']
+// let a = [1, 2, 3]
+let a: number[] = [1, 2, 3]
+// a = [1, '']
+
+let b: Array<number> = [1, 2, 3]
+
+let c: (number | string)[] = [1, 2, '']
+
+let d: Array<number | string> = [1, 2, '']
+
+// Tuple (кортежи)
+let e: [number, string] = [1, '']
+// e = [1]
+// e = [1, 2]
+
+let f: [number, string] = [1, '']
+// f = [1]
+// f = [1, 2]
+
+// enum (перечисление)
+// enum G {
+//   A = 5,
+//   B
+// }
+// console.log(G.A, G.B, G[G.A], G[G.B])
+
+enum G {
+  A = 'Hello',
+  B = 'TS'
 }
+console.log(G.A, G.B);
+
+const enum H {
+  A,
+  B
+}
+console.log(H.A, H.B)
+
+
 
